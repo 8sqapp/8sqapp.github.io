@@ -11,6 +11,17 @@
 			body {
 				background: #101010;
 				overflow-x: scroll;
+				height: 100%;
+			}
+
+			.icon {
+				width: 81px;
+				height: 32px;
+				opacity: 1 !important;
+				margin-bottom: 0 !important;
+				position: absolute;
+				left: 30px;
+				top: 20px;
 			}
 
 			.container {
@@ -20,7 +31,7 @@
 				position: relative;
 				white-space: nowrap;
 				/* overflow: hidden; */
-				animation: scroll 20s linear infinite;
+				animation: scroll 18s linear infinite alternate;
 			}
 
 			@keyframes scroll {
@@ -28,8 +39,8 @@
 					transform: translateX(0);
 				}
 
-				50% {
-					transform: translateX(-50%);
+				100% {
+					transform: translateX(-80%);
 				}
 			}
 
@@ -38,6 +49,8 @@
 				flex-flow: column wrap;
 				align-items: center;
 			}
+			
+			
 
 			.columndiv {
 				display: flex;
@@ -53,6 +66,7 @@
 				height: 100%;
 				z-index: 20;
 				display: flex;
+				flex-flow: column wrap;
 				align-items: center;
 				justify-content: center;
 			}
@@ -71,9 +85,10 @@
 			}
 
 			.btn {
-				opacity: 1 !important;
 				margin-top: 5%;
 				cursor: pointer;
+				width: 330px;
+				height: 64px;
 			}
 
 			.btndiv {
@@ -81,86 +96,248 @@
 				border-radius: 90px;
 			}
 
-			img {
+			.item {
 				width: 295px;
 				margin-bottom: 4%;
 				opacity: 0.3 !important;
-				;
 			}
+
+			.mobile-view {
+				display: flex;
+				height: 100%;
+			}
+
+			.container_mobile {
+				display: flex;
+				align-content: space-between;
+				height: 100%;
+				position: relative;
+				white-space: nowrap;
+				animation: scroll_mobile 25s linear infinite alternate;
+			}
+			
+			@keyframes scroll_mobile {
+				0% {
+					transform: translateX(1vh);
+				}
+			
+				100% {
+					transform: translateX(-250vh);
+				}
+			}
+
+			.columndiv_mobile {
+				display: flex;
+				flex-flow: column wrap;
+				margin-right: 3vh;
+			}
+
+			.item_mobile {
+				width: 45vh;
+				margin-bottom: 3vh;
+				opacity: 0.3 !important;
+			}
+			
+			.icon_mobile {
+				width: 15vh;
+				height: 5.9vh;
+				position: absolute;
+				top: 2vh;
+			}
+			
+			.maindiv_mobile{
+				display: flex;
+				flex-flow: column wrap;
+				align-items: center;
+				margin-bottom: 20vh;
+			}
+			
+			.title8_mobile{
+				color: #fff;
+				font-weight: 400;
+				font-size: 5vh;
+			}
+			
+			.titledec_mobile{
+				color: #fff;
+				font-weight: 400;
+				font-size: 2vh;
+				margin-top: 2.5vh;
+			}
+			
+			.btn_mobile{
+				margin-top: 4vh;
+				cursor: pointer;
+				width: 35vh;
+				height: 7vh;
+			}
+			
 		</style>
 	</head>
 	<body>
-		<div class="container" id="containers">
-			<div class="columndiv">
-				<img class="item" src="images/01.jpg">
-				<img class="item" src="images/02.jpg">
-				<img class="item" src="images/03.gif">
-				<img class="item" src="images/04.jpg">
-			</div>
-			<div class="columndiv">
-				<img class="item" src="images/36.jpg">
-				<img class="item" src="images/37.gif">
-				<img class="item" src="images/38.jpg">
-				<img class="item" src="images/39.jpg">
-			</div>
-			
-			<div class="columndiv">
-				<img class="item" src="images/09.jpg">
-				<img class="item" src="images/10.jpg">
-				<img class="item" src="images/11.gif">
-				<img class="item" src="images/12.jpg">
-			</div>
-			<div class="columndiv">
-				<img class="item" src="images/13.gif">
-				<img class="item" src="images/14.jpg">
-				<img class="item" src="images/15.gif">
-				<img class="item" src="images/16.jpg">
-			</div>
-			<div class="columndiv">
-				<img class="item" src="images/17.jpg">
-				<img class="item" src="images/18.jpg">
-				<img class="item" src="images/19.gif">
-				<img class="item" src="images/20.jpg">
-			</div>
-			<div class="columndiv">
-				<img class="item" src="images/21.jpg">
-				<img class="item" src="images/22.jpg">
-				<img class="item" src="images/23.gif">
-				<img class="item" src="images/24.jpg">
-			</div>
-			<div class="columndiv">
-				<img class="item" src="images/25.jpg">
-				<img class="item" src="images/26.jpg">
-				<img class="item" src="images/27.gif">
-				<img class="item" src="images/28.gif">
-			</div>
-			<div class="columndiv">
-				<img class="item" src="images/29.gif">
-				<img class="item" src="images/30.jpg">
-				<img class="item" src="images/31.jpg">
-				<img class="item" src="images/32.jpg">
-			</div>
-			<div class="columndiv">
-				<img class="item" src="images/05.jpg">
-				<img class="item" src="images/06.gif">
-				<img class="item" src="images/07.jpg">
-				<img class="item" src="images/08.jpg">
-			</div>
-			<div class="columndiv">
-				<img class="item" src="images/33.jpg">
-				<img class="item" src="images/34.gif">
-				<img class="item" src="images/35.jpg">
-			</div>
-		</div>
-		<div class="divBG">
-			<div class="maindiv">
-				<span class="title8">Sex Community NO.8</span>
-				<span class="titledec">最赞的性趣社区，快乐的秘密来源 —— 专为你打造</span>
+		<div id="desktop-view">
+			<!-- 电脑版网页结构 -->
 
-				<a href="https://888sq.com"><img src="images/btn.png" class="btn" /></a>
+			<div class="container" id="containers">
+				<div class="columndiv">
+					<img class="item" src="images/01.jpg">
+					<img class="item" src="images/02.jpg">
+					<img class="item" src="images/03.gif">
+					<img class="item" src="images/04.jpg">
+				</div>
+				<div class="columndiv">
+					<img class="item" src="images/36.jpg">
+					<img class="item" src="images/37.gif">
+					<img class="item" src="images/38.jpg">
+					<img class="item" src="images/39.jpg">
+				</div>
+
+				<div class="columndiv">
+					<img class="item" src="images/09.jpg">
+					<img class="item" src="images/10.jpg">
+					<img class="item" src="images/11.gif">
+					<img class="item" src="images/12.jpg">
+				</div>
+				<div class="columndiv">
+					<img class="item" src="images/13.gif">
+					<img class="item" src="images/14.jpg">
+					<img class="item" src="images/15.gif">
+					<img class="item" src="images/16.jpg">
+				</div>
+				<div class="columndiv">
+					<img class="item" src="images/17.jpg">
+					<img class="item" src="images/18.jpg">
+					<img class="item" src="images/19.gif">
+					<img class="item" src="images/20.jpg">
+				</div>
+				<div class="columndiv">
+					<img class="item" src="images/21.jpg">
+					<img class="item" src="images/22.jpg">
+					<img class="item" src="images/23.gif">
+					<img class="item" src="images/24.jpg">
+				</div>
+				<div class="columndiv">
+					<img class="item" src="images/25.jpg">
+					<img class="item" src="images/26.jpg">
+					<img class="item" src="images/27.gif">
+					<img class="item" src="images/28.gif">
+				</div>
+				<div class="columndiv">
+					<img class="item" src="images/29.gif">
+					<img class="item" src="images/30.jpg">
+					<img class="item" src="images/31.jpg">
+					<img class="item" src="images/32.jpg">
+				</div>
+				<div class="columndiv">
+					<img class="item" src="images/05.jpg">
+					<img class="item" src="images/06.gif">
+					<img class="item" src="images/07.jpg">
+					<img class="item" src="images/08.jpg">
+				</div>
+				<div class="columndiv">
+					<img class="item" src="images/33.jpg">
+					<img class="item" src="images/34.gif">
+					<img class="item" src="images/35.jpg">
+				</div>
+			</div>
+			<div class="divBG">
+				<img src="images/logo.png" class="icon" />
+				<div class="maindiv">
+					<span class="title8">Sex Community NO.8</span>
+					<span class="titledec">最赞的性趣社区，快乐的秘密来源 —— 专为你打造</span>
+
+					<a href="https://888sq.com"><img src="images/btn.png" class="btn" /></a>
+				</div>
+			</div>
+
+		</div>
+		<div id="mobile-view">
+			<!-- 手机版网页结构 -->
+			<div class="container_mobile" id="containers_mobile">
+				<div class="columndiv_mobile">
+					<img class="item_mobile" src="images/01.jpg">
+					<img class="item_mobile" src="images/02.jpg">
+					<img class="item_mobile" src="images/03.gif">
+					<img class="item_mobile" src="images/04.jpg">
+				</div>
+				<div class="columndiv_mobile">
+					<img class="item_mobile" src="images/36.jpg">
+					<img class="item_mobile" src="images/37.gif">
+					<img class="item_mobile" src="images/38.jpg">
+					<img class="item_mobile" src="images/39.jpg">
+				</div>
+				
+				<div class="columndiv_mobile">
+					<img class="item_mobile" src="images/09.jpg">
+					<img class="item_mobile" src="images/10.jpg">
+					<img class="item_mobile" src="images/11.gif">
+					<img class="item_mobile" src="images/12.jpg">
+				</div>
+				<div class="columndiv_mobile">
+					<img class="item_mobile" src="images/13.gif">
+					<img class="item_mobile" src="images/14.jpg">
+					<img class="item_mobile" src="images/15.gif">
+					<img class="item_mobile" src="images/16.jpg">
+				</div>
+				<div class="columndiv_mobile">
+					<img class="item_mobile" src="images/17.jpg">
+					<img class="item_mobile" src="images/18.jpg">
+					<img class="item_mobile" src="images/19.gif">
+					<img class="item_mobile" src="images/20.jpg">
+				</div>
+				<div class="columndiv_mobile">
+					<img class="item_mobile" src="images/21.jpg">
+					<img class="item_mobile" src="images/22.jpg">
+					<img class="item_mobile" src="images/23.gif">
+					<img class="item_mobile" src="images/24.jpg">
+				</div>
+				<div class="columndiv_mobile">
+					<img class="item_mobile" src="images/25.jpg">
+					<img class="item_mobile" src="images/26.jpg">
+					<img class="item_mobile" src="images/27.gif">
+					<img class="item_mobile" src="images/28.gif">
+				</div>
+				<div class="columndiv_mobile">
+					<img class="item_mobile" src="images/29.gif">
+					<img class="item_mobile" src="images/30.jpg">
+					<img class="item_mobile" src="images/31.jpg">
+					<img class="item_mobile" src="images/32.jpg">
+				</div>
+				<div class="columndiv_mobile">
+					<img class="item_mobile" src="images/05.jpg">
+					<img class="item_mobile" src="images/06.gif">
+					<img class="item_mobile" src="images/07.jpg">
+					<img class="item_mobile" src="images/08.jpg">
+				</div>
+				<div class="columndiv_mobile">
+					<img class="item_mobile" src="images/35.jpg">
+					<img class="item_mobile" src="images/34.gif">
+					<img class="item_mobile" src="images/33.jpg">
+				</div>
+			</div>
+			<div class="divBG">
+				<img src="images/logo.png" class="icon_mobile" />
+				<div class="maindiv_mobile">
+					<span class="title8_mobile">Sex Community NO.8</span>
+					<span class="titledec_mobile">最赞的性趣社区，快乐的秘密来源 —— 专为你打造</span>
+			
+					<a href="https://888sq.com"><img src="images/btn.png" class="btn_mobile" /></a>
+				</div>
 			</div>
 		</div>
+
+
 		<script language="javascript" type="text/javascript">
+			if (/Mobile|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+				// 如果是手机浏览器，隐藏电脑版网页结构，显示手机版网页结构
+				document.getElementById("desktop-view").style.display = "none";
+				document.getElementById("mobile-view").style.display = "block";
+			} else {
+				// 如果是电脑浏览器，隐藏手机版网页结构，显示电脑版网页结构
+				document.getElementById("desktop-view").style.display = "block";
+				document.getElementById("mobile-view").style.display = "none";
+			}
+
 			var mo = function(e) {
 				passive: false;
 			};
